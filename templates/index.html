@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liability Customers Accepting Personal Loan</title>
+</head>
+<body>
+  <h1>Liability Customers Accepting Personal Loan</h1>
+
+  <form class="form" action="/predict" method="POST">
+    <label>Age in completed years:</label><br>
+    <input type="number" name="Age" class="form-control"><br><br>
+
+    <label>Income in ($000):</label>
+    <input type="number" name="Income" class="form-control"><br><br>
+
+    <label>Family size:</label>
+    <input type="number" name="Family" class="form-control"><br><br>
+
+    <label>Average spending on Credit cards per month in ($000):</label>
+    <input type="text" name="CCAvg" class="form-control"><br><br>
+
+
+    <label>Education Level (1: Undergrad; 2: Graduate; 3: Advanced/Professional)</label>
+    <input type="number" name="Education" class="form-control"><br><br>
+
+    <label>Value of house mortgage if any, ($000):</label>
+    <input type="number" name="Mortgage" class="form-control"><br><br>
+
+    <label>Has a Securities Account:</label>
+
+    <input type="number" name="Securities Account" class="form-control"><br><br>
+
+    <label>Certificate of Deposit Account:</label>
+    <input type="number" name="CD Account" class="form-control"><br><br>
+
+    <label>Internet Banking Facility:</label>
+    <input type="number" name="Online" class="form-control"><br><br>
+
+    <label>Credit Card:</label>
+    <input type="number" name="Credit Card" class="form-control"><br><br>
+
+    <button type="submit" value="Predict" class="btn btn-block btn-success">predict</button>
+  </form>
+
+  {% if label %}
+    {% if label == 1 %}
+      <h3 style="color:green">Will Accept Loan</h3>
+    {% else %}
+      <h3 style="color:red">Will Reject Loan</h3>
+    {% endif %}
+  {% endif %}
+</body>
+</html>
